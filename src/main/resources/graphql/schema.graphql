@@ -1,0 +1,27 @@
+type City {
+    id: ID!
+    name: String!
+    countryCode: Country!
+    district: String!
+    population: Int!
+}
+
+type Country {
+    id: ID!
+    code: String!
+    name: String!
+    cities: [City]
+}
+
+type Query {
+    cities: [City]
+    city(id: ID!): City
+    countries: [Country]
+    country(id: ID!): Country
+}
+
+type Mutation {
+    createCity(name: String!, countryCode: String!, district: String!, population: Int!): City
+    updateCity(id: ID!, name: String, countryCode: String, district: String, population: Int): City
+    deleteCity(id: ID!): String
+}
