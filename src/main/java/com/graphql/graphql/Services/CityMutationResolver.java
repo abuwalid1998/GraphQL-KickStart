@@ -19,7 +19,6 @@ public class CityMutationResolver implements GraphQLMutationResolver {
 
     public City createCity(String name, String countryCode, String district, Integer population) {
         Country country = countryRepository.getReferenceById(Integer.valueOf(countryCode));
-        if (country == null) throw new RuntimeException("Country not found");
 
         City city = new City();
         city.setName(name);
