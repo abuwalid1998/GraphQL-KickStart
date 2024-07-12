@@ -12,9 +12,9 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class WorldController {
 
-    @QueryMapping
-    public City bookById() {
-        return Book.getById(id);
-    }
+//    @QueryMapping
+//    public City bookById() {
+//        return Book.getById(id);
+//    }
 
 }
